@@ -3,7 +3,7 @@ inspired by [sshm](https://github.com/jiuzi/sshm)
 
 ## Usage
 ```
-iank@Office  ~/go/src/github.com/koi $ koi
+iank@Office  ~/go/src/github.com/koi $ koi -h
 Koi SSH Manager
 
 Usage:

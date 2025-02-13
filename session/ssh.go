@@ -21,7 +21,7 @@ func NewClient(machine *model.Machine) (*ssh.Client, error) {
 	switch machine.Type {
 	case "password":
 		config.Auth = []ssh.AuthMethod{ssh.Password(machine.Password)}
-	case "ssh_key":
+	case "key":
 		config.Auth = []ssh.AuthMethod{publicKeyAuthFunc(machine.Key)}
 	default:
 		config.Auth = []ssh.AuthMethod{ssh.Password(machine.Password)}
