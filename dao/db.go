@@ -15,7 +15,7 @@ func InitDB() *gorm.DB {
 	gormConfig := &gorm.Config{}
 	configDir, _ := os.UserConfigDir()
 
-	sshmDbPath := path.Join(configDir, "sshm.db")
+	sshmDbPath := path.Join(configDir, "koi_sshm.db")
 	db, err := gorm.Open(sqlite.Open(fmt.Sprintf("%s?_journal=WAL&_vacuum=incremental",
 		sshmDbPath)), gormConfig)
 	if err != nil {
